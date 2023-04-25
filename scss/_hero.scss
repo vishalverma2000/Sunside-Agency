@@ -1,0 +1,84 @@
+.hero {
+  background-image: url(/images/mobile/image-header.jpg);
+  height: 80vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  @include breakpoint(medium) {
+    background-image: url(/images/desktop/image-header.jpg);
+    height: 95vh;
+  }
+}
+
+header {
+  padding: 1.38rem 0.94rem;
+
+  @include breakpoint(medium) {
+    padding: 1.61rem 2.22rem;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+}
+
+li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+ul,
+li {
+  display: inline-block;
+}
+
+li {
+  a {
+    color: $White;
+    transition: all 150ms ease-in-out;
+    &:hover {
+      color: rgba(white, 0.7);
+    }
+  }
+}
+
+.btn {
+  color: black;
+  background-color: $White;
+  text-transform: uppercase;
+  border-radius: 1.11rem;
+  padding: 0.55rem 0.88rem;
+  border: none;
+  font-weight: bold;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    color: $White;
+    background-color: rgba(white, 0.3);
+  }
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $fraunces;
+  letter-spacing: 0.5rem;
+  color: white;
+
+  h1 {
+    margin: 2.77rem auto;
+    font-size: 2.2rem;
+
+    @include breakpoint(medium) {
+      margin: 5.55rem auto;
+    }
+  }
+}

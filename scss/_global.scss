@@ -1,0 +1,44 @@
+@import "variables";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 112.5%; //18px
+}
+
+body {
+  font-family: $barlow;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 0.83rem;
+  font-family: $barlow;
+}
+
+.container {
+  max-width: 74.11rem;
+  margin: 0 auto;
+}
+
+.mobile-hide {
+  display: none;
+
+  @include breakpoint(medium) {
+    display: block;
+  }
+}
+.desktop-hide {
+  display: block;
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
