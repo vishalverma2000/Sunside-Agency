@@ -22,6 +22,12 @@ a {
   font-family: "Barlow", sans-serif;
 }
 
+ul,
+li,
+.logo {
+  display: inline-block;
+}
+
 .container {
   max-width: 74.11rem;
   margin: 0 auto;
@@ -45,9 +51,36 @@ a {
   }
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.flex-d-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .hero {
   background-image: url(/images/mobile/image-header.jpg);
-  height: 80vh;
+  height: 70vh;
   width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
@@ -69,55 +102,44 @@ header {
   }
 }
 
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.logo {
-  display: inline-block;
-}
-
-li:not(:last-child) {
-  margin-right: 1.5rem;
-}
-
-ul,
-li {
-  display: inline-block;
-}
-
 li a {
-  color: hsl(0, 0%, 100%);
+  color: rgb(255, 255, 255);
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
 li a:hover {
   color: rgba(255, 255, 255, 0.7);
 }
+li:not(:last-child) {
+  margin-right: 1.5rem;
+}
 
 .btn {
   color: black;
-  background-color: hsl(0, 0%, 100%);
   text-transform: uppercase;
-  border-radius: 1.11rem;
-  padding: 0.55rem 0.88rem;
   border: none;
-  font-weight: bold;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
-.btn:hover {
+.btn__primary {
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.11rem;
+  padding: 0.55rem 0.88rem;
+}
+.btn__primary:hover {
   cursor: pointer;
-  color: hsl(0, 0%, 100%);
+  color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.3);
+}
+.btn__secondary {
+  background-color: rgb(250, 212, 0);
+  font-family: "Fraunces", serif;
+  padding: 1.11rem 1.66rem;
+  border-radius: 2.77rem;
+  margin-top: 1.94rem;
+}
+.btn__secondary:hover {
+  background-color: rgba(250, 212, 0, 0.7);
 }
 
 .title {
@@ -125,7 +147,7 @@ li a:hover {
   text-transform: uppercase;
   font-family: "Fraunces", serif;
   letter-spacing: 0.5rem;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .title h1 {
   margin: 2.77rem auto;
@@ -135,4 +157,29 @@ li a:hover {
   .title h1 {
     margin: 5.55rem auto;
   }
+}
+
+.hamMenu {
+  width: calc(100% - 1.77rem);
+  position: absolute;
+  height: 45vh;
+  left: 0.88rem;
+  right: 0.88rem;
+  margin-top: 1.38rem;
+  background-color: rgb(255, 255, 255);
+  -webkit-clip-path: polygon(93% 6%, 100% 0, 100% 60%, 100% 100%, 0 100%, 0 60%, 0 6%);
+          clip-path: polygon(93% 6%, 100% 0, 100% 60%, 100% 100%, 0 100%, 0 60%, 0 6%);
+}
+.hamMenu a:not(:last-child) {
+  margin-top: 1.94rem;
+  color: rgb(129, 132, 152);
+  font-size: 0.94rem;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.hamMenu a:not(:last-child):hover {
+  opacity: 0.7;
+}
+.hamMenu .hamItems {
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */

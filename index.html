@@ -24,21 +24,33 @@
   <body>
     <div class="hero">
       <header>
-        <nav class="container">
+        <nav class="container flex flex-ai-c flex-jc-sb">
           <div class="logo">
             <img src="/images/logo.svg" alt="" />
           </div>
+
           <div class="hamMenuBtn desktop-hide">
             <img src="/images/icon-hamburger.svg" alt="" />
           </div>
-          <ul class="nav__links mobile-hide">
+
+          <ul class="header mobile-hide">
             <li><a href="#">About</a></li>
             <li><a href="#">Sevices</a></li>
             <li><a href="#">Projects</a></li>
-            <li><a href="#" class="btn">Contacts</a></li>
+            <li><a href="#" class="btn btn__primary">Contacts</a></li>
           </ul>
         </nav>
+
+        <div class="hamMenu container desktop-hide">
+          <div class="hamItems flex flex-d-c flex-ai-c flex-jc-c">
+            <a href="">About</a>
+            <a href="">Sevices</a>
+            <a href="">Projects</a>
+            <a href="#" class="btn btn__secondary">Contact</a>
+          </div>
+        </div>
       </header>
+
       <div class="container">
         <div class="title">
           <h1>We are creatives</h1>

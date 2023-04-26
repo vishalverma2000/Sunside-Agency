@@ -23,6 +23,12 @@ a {
   font-family: $barlow;
 }
 
+ul,
+li,
+.logo {
+  display: inline-block;
+}
+
 .container {
   max-width: 74.11rem;
   margin: 0 auto;
@@ -40,5 +46,24 @@ a {
 
   @include breakpoint(medium) {
     display: none;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-d-c {
+    flex-direction: column;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+  &-jc-c {
+    justify-content: center;
   }
 }
