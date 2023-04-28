@@ -20,6 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
       rel="stylesheet"
     />
+    <script src="/index.js" defer></script>
   </head>
   <body>
     <div class="hero">
@@ -29,11 +30,13 @@
             <img src="/images/logo.svg" alt="" />
           </div>
 
-          <div class="hamMenuBtn desktop-hide">
-            <img src="/images/icon-hamburger.svg" alt="" />
+          <div class="desktop-hide header__hamMenu" id="btnHamburger">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
 
-          <ul class="header mobile-hide">
+          <ul class="mobile-hide">
             <li><a href="#">About</a></li>
             <li><a href="#">Sevices</a></li>
             <li><a href="#">Projects</a></li>
@@ -41,18 +44,18 @@
           </ul>
         </nav>
 
-        <div class="hamMenu container desktop-hide">
-          <div class="hamItems flex flex-d-c flex-ai-c flex-jc-c">
-            <a href="">About</a>
-            <a href="">Sevices</a>
-            <a href="">Projects</a>
+        <div class="hamMenu container desktop-hide has-fade" id="hamMenu">
+          <div class="hamMenu__items flex flex-d-c flex-ai-c flex-jc-c">
+            <a href="#">About</a>
+            <a href="#">Sevices</a>
+            <a href="#">Projects</a>
             <a href="#" class="btn btn__secondary">Contact</a>
           </div>
         </div>
       </header>
 
       <div class="container">
-        <div class="title">
+        <div class="tittle">
           <h1>We are creatives</h1>
           <img src="/images/icon-arrow-down.svg" alt="" />
         </div>

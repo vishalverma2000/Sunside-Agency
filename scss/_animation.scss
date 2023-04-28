@@ -1,0 +1,34 @@
+.has-fade {
+  visibility: hidden;
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    height: 0vh;
+  }
+
+  to {
+    visibility: visible;
+    height: 45vh;
+  }
+}
+
+.fade-in {
+  animation: fade-in 400ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    height: 45vh;
+  }
+  to {
+    visibility: hidden;
+    height: 0vh;
+  }
+}
+
+.fade-out {
+  animation: fade-out 400ms ease-in-out forwards;
+}

@@ -1,22 +1,38 @@
+html {
+  font-size: 112.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 *,
 *::after,
 *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 112.5%;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
   font-family: "Barlow", sans-serif;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-a {
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
   text-decoration: none;
   font-size: 0.83rem;
   font-family: "Barlow", sans-serif;
@@ -42,9 +58,6 @@ li,
   }
 }
 
-.desktop-hide {
-  display: block;
-}
 @media screen and (min-width: 699px) {
   .desktop-hide {
     display: none;
@@ -78,21 +91,6 @@ li,
           justify-content: center;
 }
 
-.hero {
-  background-image: url(/images/mobile/image-header.jpg);
-  height: 70vh;
-  width: 100vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-}
-@media screen and (min-width: 699px) {
-  .hero {
-    background-image: url(/images/desktop/image-header.jpg);
-    height: 95vh;
-  }
-}
-
 header {
   padding: 1.38rem 0.94rem;
 }
@@ -100,6 +98,33 @@ header {
   header {
     padding: 1.61rem 2.22rem;
   }
+}
+header .open > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+header .open > span:nth-child(2) {
+  opacity: 0;
+}
+header .open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+header #btnHamburger {
+  cursor: pointer;
+}
+header span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: 3px 1px;
+          transform-origin: 3px 1px;
+}
+header span:not(:last-child) {
+  margin-bottom: 5px;
 }
 
 li a {
@@ -142,27 +167,9 @@ li:not(:last-child) {
   background-color: rgba(250, 212, 0, 0.7);
 }
 
-.title {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Fraunces", serif;
-  letter-spacing: 0.5rem;
-  color: rgb(255, 255, 255);
-}
-.title h1 {
-  margin: 2.77rem auto;
-  font-size: 2.2rem;
-}
-@media screen and (min-width: 699px) {
-  .title h1 {
-    margin: 5.55rem auto;
-  }
-}
-
 .hamMenu {
   width: calc(100% - 1.77rem);
   position: absolute;
-  height: 45vh;
   left: 0.88rem;
   right: 0.88rem;
   margin-top: 1.38rem;
@@ -180,6 +187,94 @@ li:not(:last-child) {
 .hamMenu a:not(:last-child):hover {
   opacity: 0.7;
 }
-.hamMenu .hamItems {
+.hamMenu__items {
   height: 100%;
+}
+
+.hero {
+  background-image: url(/images/mobile/image-header.jpg);
+  height: 70vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+@media screen and (min-width: 699px) {
+  .hero {
+    background-image: url(/images/desktop/image-header.jpg);
+    height: 95vh;
+  }
+}
+
+.tittle {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  letter-spacing: 0.5rem;
+  color: rgb(255, 255, 255);
+}
+.tittle h1 {
+  margin: 2.77rem auto;
+  font-size: 2.2rem;
+}
+@media screen and (min-width: 699px) {
+  .tittle h1 {
+    margin: 5.55rem auto;
+  }
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    height: 0vh;
+  }
+  to {
+    visibility: visible;
+    height: 45vh;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    height: 0vh;
+  }
+  to {
+    visibility: visible;
+    height: 45vh;
+  }
+}
+.fade-in {
+  -webkit-animation: fade-in 400ms ease-in-out forwards;
+          animation: fade-in 400ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    height: 45vh;
+  }
+  to {
+    visibility: hidden;
+    height: 0vh;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    height: 45vh;
+  }
+  to {
+    visibility: hidden;
+    height: 0vh;
+  }
+}
+.fade-out {
+  -webkit-animation: fade-out 400ms ease-in-out forwards;
+          animation: fade-out 400ms ease-in-out forwards;
 }/*# sourceMappingURL=main.css.map */
