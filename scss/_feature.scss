@@ -1,0 +1,58 @@
+.feature {
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 580px);
+
+    &-Text {
+      padding: 164px 123px;
+      text-align: left;
+    }
+
+    &-Img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  h2 {
+    font-family: $fraunces;
+    font-size: 29px;
+    font-weight: 900;
+    color: $Very-dark-blue;
+  }
+
+  p {
+    font-size: 15px;
+    color: $Dark-grayish-blue;
+  }
+
+  .cta {
+    position: relative;
+    font-family: $fraunces;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $Very-dark-blue;
+
+    &::before {
+      content: "";
+      background-color: $yellow;
+      top: 9px;
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      z-index: -1;
+      transition: all 150ms ease-in-out;
+      border-radius: 50px;
+      opacity: 0.3;
+    }
+
+    &__2::before {
+      background-color: $soft-red;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
