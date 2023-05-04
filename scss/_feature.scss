@@ -1,49 +1,86 @@
 .feature {
-  &__box {
+  &__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 580px);
+    grid-template-columns: 1fr;
 
-    &-Text {
-      padding: 164px 123px;
-      text-align: left;
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 32.2rem);
     }
 
-    &-Img {
+    .boxText {
+      padding: 2.72rem 1.33rem;
+      text-align: center;
+      @include breakpoint(medium) {
+        padding: 9.11rem 6.83rem;
+        text-align: left;
+      }
+    }
+
+    #a {
+      @include breakpoint(medium) {
+        grid-row: 1 /2;
+        grid-column: 1/ 2;
+      }
+    }
+
+    .boxImg {
       width: 100%;
       height: 100%;
+    }
+
+    .boxTextImg {
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+
+      > div {
+        padding: 23.3rem 10.72rem 4.16rem;
+      }
+      > p {
+        color: $Very-dark-blue;
+      }
+
+      .first {
+        background-image: url(/images/desktop/image-graphic-design.jpg);
+      }
+      .second {
+        background-image: url(/images/desktop/image-photography.jpg);
+      }
     }
   }
 
   h2 {
     font-family: $fraunces;
-    font-size: 29px;
+    font-size: 1.61rem;
     font-weight: 900;
     color: $Very-dark-blue;
   }
 
   p {
-    font-size: 15px;
+    font-size: 0.83rem;
     color: $Dark-grayish-blue;
   }
 
   .cta {
     position: relative;
     font-family: $fraunces;
-    font-size: 12px;
+    font-size: 0.66rem;
     text-transform: uppercase;
     color: $Very-dark-blue;
 
     &::before {
       content: "";
       background-color: $yellow;
-      top: 9px;
+      top: 0.5rem;
       position: absolute;
       width: 100%;
-      height: 8px;
+      height: 0.44rem;
       z-index: -1;
       transition: all 150ms ease-in-out;
-      border-radius: 50px;
+      border-radius: 2.77rem;
       opacity: 0.3;
     }
 

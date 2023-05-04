@@ -1,0 +1,48 @@
+.testimonial {
+  padding: 160px;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 80px;
+    font-family: $fraunces;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 17px;
+    color: $Grayish-blue;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__bio {
+    max-width: 400px;
+
+    > img {
+      height: 71px;
+      width: 71px;
+      border-radius: 50%;
+    }
+
+    > p {
+      margin: 64px 0;
+      color: $Very-dark-grayish-blue;
+      font-family: $barlow;
+    }
+
+    > h3 {
+      color: $Very-dark-blue;
+      font-family: $fraunces;
+      font-weight: 900;
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+    > span {
+      color: $Grayish-blue;
+      font-size: 13px;
+    }
+  }
+}
